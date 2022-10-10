@@ -200,6 +200,14 @@ class RustPlus extends EventEmitter {
             },
         }, callback);
     }
+    setEntityValueAsync(entityId, value) {
+        return this.sendRequestAsync({
+            entityId: entityId,
+            setEntityValue: {
+                value: value,
+            },
+        });
+    }
 
     /**
      * Turn a Smart Switch On
@@ -243,6 +251,13 @@ class RustPlus extends EventEmitter {
             },
         }, callback);
     }
+    sendTeamMessageAsync(message) {
+        return this.sendRequestAsync({
+            sendTeamMessage: {
+                message: message,
+            },
+        });
+    }
 
     /**
      * Get info for an Entity
@@ -257,6 +272,14 @@ class RustPlus extends EventEmitter {
             },
         }, callback);
     }
+    getEntityInfoAsync(entityId) {
+        return this.sendRequestAsync({
+            entityId: entityId,
+            getEntityInfo: {
+
+            },
+        });
+    }
 
     /**
      * Get the Map
@@ -267,6 +290,13 @@ class RustPlus extends EventEmitter {
 
             },
         }, callback);
+    }
+    getMapAsync() {
+        this.sendRequestAsync({
+            getMap: {
+
+            },
+        });
     }
     
     /**
@@ -279,6 +309,13 @@ class RustPlus extends EventEmitter {
             },
         }, callback);
     }
+    getTimeAsync() {
+        return this.sendRequestAsync({
+            getTime: {
+
+            },
+        });
+    }
 
     /**
      * Get all map markers
@@ -289,6 +326,13 @@ class RustPlus extends EventEmitter {
 
             },
         }, callback);
+    }
+    getMapMarkersAsync() {
+        return this.sendRequestAsync({
+            getMapMarkers: {
+
+            },
+        });
     }
 
     /**
@@ -301,6 +345,13 @@ class RustPlus extends EventEmitter {
             },
         }, callback);
     }
+    getInfoAsync() {
+        return this.sendRequestAsync({
+            getInfo: {
+
+            },
+        })
+    }
 
     /**
      * Get team info
@@ -311,6 +362,13 @@ class RustPlus extends EventEmitter {
 
             },
         }, callback);
+    }
+    getTeamInfoAsync() {
+        return this.sendRequestAsync({
+            getTeamInfo: {
+
+            }
+        })
     }
 
     /**
